@@ -1,0 +1,4 @@
+AnalizatorX
+key{
+   e9F3359r
+}
