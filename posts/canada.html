@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- bootstrap -->
+    <link href="../assets/css/bootstrap_post.css" rel="stylesheet">
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+
+    <!-- my -->
+    <link href="../assets/css/styles_post.css" rel="stylesheet">
+    <link rel="icon" href="../static/electronics.png">
+    <title>Canada Inmigration</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light shadow">
+            <div class="container-fluid" id="nav">
+                <a class="navbar-brand text-danger p-2 fs-1 fw-bold" href="../index.html">
+                    Canada Inmigration
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse px-5 p-2 fs-3 justify-content-end" id="navbarNavAltMarkup">
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+<main>
+    <h1>Datos</h1>
+    <p>
+        Los datos que se muestran a continuacion relacionan la cantidad de personas (migrantes) que entraron por vias tanto 
+        legales como ilegales a Canada comprendido hasta el año 2013. Los datos se encuentran tanto en <code>.csv</code> como en 
+        <code>.xlsx</code>. El objetivo del estudio de este set de datos que contiene personas de todos los paises es tratar de predecir 
+        eventos futuros con respecto a este tema tan delicado.<br>
+        La siguiente figura muestra una seccion de la tabla.
+        <div class="text-center rounded my-2">
+            <img src="../media/canada/001.png" class="img-fluid rounded" alt="to be continue">
+        </div>
+    </p>
+    <h1>Scripts</h1>
+    <h2>librerías</h2>
+    <p>
+        <li><code>numpy</code></li>
+        <li><code>pandas</code></li>
+        <li><code>sklearn</code></li>
+        <li><code>matplotlib</code></li>
+        <li><code>seaborn</code></li>
+    </p>
+    <h2>.py</h2>
+    <p>El archivo en python posee un codigo corto y legible en donde se fragmneta la tabla y se genera nuevos DATAFRAMES limpios
+         para poder utilizar los datos sin errores.
+    </p>
+    <h2>.ipynb</h2>
+    <p> 
+        Se utilizan funciones de regresión lineal simple y regresión lineal multiple para entrenar el set de datos, luego se compara con los datos reales 
+        registrados en el año 2013 para medir la punteria de la prediccion. Tambien juega con funciones de mediana dentro de los datos para 
+        tener una idea mas visual del movimiento de migracion todo un periodo de tiempo. 
+    </p>
+    <p>
+        1.La primera figura muestra la cantidad de inmigrantes por continentes.
+        <div class="text-center rounded my-2">
+            <img src="../media/canada/bar.png" class="img-fluid rounded" alt="to be continue">
+        </div>
+        2.Tambien se puede ver la cantidad de migrantes por paises por ejemplo <b>Afganistan</b>
+        <div class="text-center rounded my-2">
+            <img src="../media/canada/afg.png" class="img-fluid rounded" alt="to be continue">
+        </div>
+    </p>
+    <h1>Predict</h1>
+    <p>
+        La estrategia de la prediccion fue entrenar valores de años anteriores contra valores de anos posteriores para asi entrenar una variable 
+        que contenga una buena prediccion para futuros.
+        Lo que vas a ver a continuacion es el resultado de este algoritmo en el cual las curvas de color azul representan las 6 predicciones hechas 
+        y la curva roja es la mediana de estas.
+        <div class="text-center rounded my-2">
+            <img src="../media/canada/mejorpredict1.png" class="img-fluid rounded" alt="to be continue">
+        </div>
+        Sin embargo la proxima imagen muestra una comparacion entre la mediana y el valor registrado manualmente para el año 2023.
+        <div class="text-center rounded my-2">
+            <img src="../media/canada/prediccion_vs_real.png" class="img-fluid rounded" alt="to be continue">
+        </div>
+    </p>
+
+    <h1>Para futuros</h1>
+    <p>
+        Para el 2014 y los proximos años no hay mucha variacion de los datos, se presentan muy semejantes a los valores historicos con respecto a la 
+        frecuencia con la que ingresan los migrantes al pais. No siendo asi con respecto a los numeros los cuales muestran un aumento considerable con respecto 
+        a la mediana, tal como muestra la figura.
+        <div class="text-center rounded my-2">
+            <img src="../media/canada/proximos_anos.png" class="img-fluid rounded" alt="to be continue">
+        </div>
+        El nuevo DATAFRAME generado se ve de la siguiente forma
+        <div class="text-center rounded my-2">
+            <img src="../media/canada/ndf.png" class="img-fluid rounded" alt="to be continue">
+        </div>
+    </p>
+    <h5> <a href="#">Volver...</a></h5>
+</main>
+
+</html>

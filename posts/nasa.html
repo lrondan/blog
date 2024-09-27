@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- bootstrap -->
+    <link href="../assets/css/bootstrap_post.css" rel="stylesheet">
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+
+    <!-- my -->
+    <link href="../assets/css/styles_post.css" rel="stylesheet">
+    <link rel="icon" href="../static/electronics.png">
+    <title>UFO</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light shadow">
+            <div class="container-fluid" id="nav">
+                <a class="navbar-brand text-danger p-2 fs-1 fw-bold" href="../index.html">
+                    UFO
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse px-5 p-2 fs-3 justify-content-end" id="navbarNavAltMarkup">
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+
+<main>
+    <h1>Sets de datos</h1>
+    <p>
+        Hola, en esta entrada les voy a contar mi experiencia con datos de fuentes abiertas a todo público, provenientes de la página web <a href="www.kaggle.com">Kaggle.com</a> vasados en datos recogidos por
+         la Agencia Aeroespacial de los Estados Unidos (<b>NASA</b>).<br>
+         El archivo de extension <code>.csv</code> muestra una coleccion de datos referentes a avistamientos de ovnis por su traduccion 
+         al ingles UFO. Se pretende con este analisis primeramente obtener una data limpia y libre de errores. Posteriormente se intentara predecir 
+         nuevos avistamientos a partir de el analisis de las muestras procesadas.<br>
+            <ol>
+                Date/Time : Muestra el momento exacto del avistamiento.
+            </ol>
+            <ol>
+                Country: Pais CANADA o USA
+            </ol>
+            <ol>
+                City: Ciudad del avistamiento
+            </ol>
+            <ol>
+                Shape: Forma geometrica
+            </ol>
+            <ol>
+                Summary: Relato
+            </ol>
+            <ol>
+                lat: valores de latitud
+            </ol>
+            <ol>
+                lng: valores de longitud
+            </ol>
+        <quote>Previz...</quote>
+        <div class="text-center rounded my-2">
+            <img src="../media/nasa/exce1.png" class="img-fluid rounded" alt="banner">
+        </div>
+    </p>
+    <h1>Script</h1>
+    <p>
+        Se recomienda empezar con una limpieza exhaustiva de datos se puede hacer desde scripts de Python o utilizando tecnología de Excel.
+         Utilizo un archivo llamado <code>rechape.py</code> para generar nuevas tablas en formato <code>.csv</code> para el posterior análisis.
+
+        <div>
+            <img src="../media/nasa/code.png" class="img-fluid rounded" alt="code">
+        </div>
+    </p>
+    <h1>Predicción</h1>
+       <p>la predicción de posibles avistamientos utilizo las siguientes librerías. <br>
+        <li>Numpy</li>
+        <li>Pandas</li>
+        <li>Matplotlib</li>
+        <li>Seaborn</li>
+        <li>Sklearn</li>
+        El modelo simple de la regresión lineal muestra el siguiente resultado. Donde la primera grafica muestra la densidad de avistamientos
+         en funcion de la longitud y latitud, mostrando un pico de avistamiento y el siguente concatena los avistamientos con las formas de
+          los objetos. Siempre mostrando picos para zonas de mayor cantidad de avistamientos en algunas ciudad de Estados Unidos.
+          <div class="text-center rounded my-2">
+            <img src="../media/nasa/output.png" class="img-fluid rounded" alt="to be continue">
+            <img src="../media/nasa/output2.png" class="img-fluid rounded" alt="to be continue">
+          </div>
+
+    </p> 
+    <h1>Panel</h1>
+    <div class="text-center rounded my-2">
+        <img src="../media/nasa/dash1.png" class="img-fluid rounded" alt="to be continue">
+        <img src="../media/nasa/dash2.png" class="img-fluid rounded" alt="to be continue">
+    </div>
+
+    <h5> <a href="#">Volver...</a></h5>
+
+</main>
+</html>

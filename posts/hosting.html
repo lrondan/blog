@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- bootstrap -->
+    <link href="../assets/css/bootstrap_post.css" rel="stylesheet">
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+
+    <!-- my -->
+    <link href="../assets/css/styles_post.css" rel="stylesheet">
+    <link rel="icon" href="../static/electronics.png">
+    <title>Hosting</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light shadow">
+            <div class="container-fluid" id="nav">
+                <a class="navbar-brand text-danger p-2 fs-1 fw-bold" href="../index.html">
+                    Hosting
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse px-5 p-2 fs-3 justify-content-end" id="navbarNavAltMarkup">
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+<section>
+    <div>
+        <img src="../media/hosting/banner.png" alt="banner" width="100%" height="100%" aria-hidden="true">
+    </div>
+</section>
+<main>
+    <h2>Acerca de los datos</h2>
+    <p>Los datos fueron obtenidos de la plataforma de <a href="www.kaggle.com">Kaggle</a> una fuente gratuita encargada de suministrar datos de prueba, en los cuales se recogieron datos que influyen en el precio de las casas en una 
+    localidad dada. Este codigo estará acompañado de un programa capáz de estimar el precio de estas casas partiendo de datos conocidos a travez de una interfaz 
+    gráfica. Para esto debemos de conocer la siguientes características:</p>
+    <ol>Dormitorios</ol>
+    <ol>Baños</ol>
+    <ol>Parkings</ol>
+    <ol>Área disponible</ol>
+    <ol>Área total</ol>
+
+    <p>Librerías utilizadas</p>
+    <li>pandas</li>
+    <li>numpy</li>
+    <li>seaborn</li>
+    <li>matplotlib</li>
+    <li>sklearn</li>
+    <li>tkinter</li>
+    <li>dash, ddc, html</li>
+    <h2>Desktop</h2>
+    <p>
+        <h3>Vista de la ventana principal</h3>
+        <img src="../media/hosting/01.png" alt="01">
+        <p>La ventana muestra una barra de titulo con el nombre del programa, luego un menu donde se pueden visualizar los gráficos de densidades de exactitud y scores 
+            los campos de texto y entrada correspondientes a cada variable y los botones funcionales. El programa se encuetra protegido contra la estimación de valores 
+            negativos en los precios mostrando así un mensaje de error como se muerte a continuación.
+            <img src="../media/hosting/02.png" alt="02">
+            <h3><b>Buscar</b></h3>
+            <img src="../media/hosting/03.png" alt="03">
+            <h3><b>Descripción de precios UF</b></h3>
+            <img src="../media/hosting/04.png" alt="04">
+            <h3><b>Descripción de precios USD</b></h3>
+            <img src="../media/hosting/05.png" alt="05">
+            <h3><b>Dash</b></h3>
+            <p>Utilizando dash se puede crear un panel donde se muestra el ascenso de los precios totales de las ventas de casas por dormitorios, y se puede llagar a la conclusión de que las
+                casas más vendidas fuero las de 4 dormitorios.
+            </p>
+            <img src="../media/hosting/06.png" alt="06">
+            <h3><b>Menú</b></h3>
+            <p>En el apartado del menu se puede ver la opcion vistas donde se muetra en formato <code>html</code> las gráficas de densidades.</p>
+            <img src="../media/hosting/07.png" alt="07">
+            <p>El grafico de densidad muestra una aproximación de los datos reales contra los datos predecidos.</p>
+            <img src="../media/hosting/08.png" alt="08">
+            <p>El grafico de scores muetra los scores dentro de la función de cross_val_predict.</p>
+            <img src="../media/hosting/09.png" alt="09">
+
+            <h5><a href="#">Volver...</a></h5>
+        </p>
+
+    </p>
+
+</main>
+</html>

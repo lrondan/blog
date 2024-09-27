@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- bootstrap -->
+    <link href="../assets/css/bootstrap_post.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles_post.css">
+    <script src="..//assetsjs/bootstrap.bundle.js"></script>
+
+    <!-- my -->
+    <link href="../assets/css/styles_post.css" rel="stylesheet">
+    <link rel="icon" href="../static/electronics.png">
+    <title>Asteroides</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light shadow">
+            <div class="container-fluid" id="nav">
+                <a class="navbar-brand text-danger p-2 fs-1 fw-bold" href="../index.html">
+                    Asteroides
+                </a>
+            </div>
+        </nav>
+    </header>
+</body>
+
+<section>
+    <div>
+        <img src="../media/asteroids/banner.jpg" alt="banner" height="100%" width="100%" aria-hidden="true">
+    </div>
+</section>
+
+<main class="container">
+    <article>
+        <h2>Datos</h2>
+        <p>En esta entrada hablaremos sobre asteroides, seguimos como en el post anterior trabajando con archivos de 
+            la NASA. Esta vez en formato <code>.json</code> cada archivo contiene multiples datos acerca de los asteroides 
+            pero fueron de dificil analisis por el modo en que se encuentran estos tipos de archivos. Es por esto que dentro de 
+            la carpeta contenida en GitHub hay un archivo llamado <code>file19950101.py</code> que basicamente su funcion es buscar 
+            resultados dentro de cada archivo de diccionario tipo <code>.json</code> y mandar las variablable hacia otro archivo 
+            llamado <code>conector.py</code> este ultimo encargado de almacenar en una base de datos tipo <b>SQLite</b> todos los 
+            valores extraidos.
+        </p>
+    </article>
+    <article>
+        <p>
+            <div class="text-center rounded my-2">
+                <img src="../media/asteroids/d.png" class="img-fluid rounded">
+                <img src="../media/asteroids/v.png" class="img-fluid rounded">
+            </div>
+            <p>
+                A partir de estos datos se obtuvo el tiempo de en que se hizo la medicion, esto es un factor importante
+                debido a que algunos de estos asteriodes representan un peligro real para la tierra, y prevenir el impacto
+                previamente aumentan las posibilidades de actuar aunte una posible catastrofe.
+                <div class="text-center rounded my-2">
+                    <img src="../media/asteroids/t.png" class="img-fluid rounded">
+                </div>
+            </p>
+        </p>     
+    </article>
+    <article>
+        <h2>Vista de los datos</h2>
+        <p>
+            <div class="text-center rounded my-2">
+                <img src="../media/asteroids/d.png" class="img-fluid rounded">
+            </div>
+            <p>
+                A partir de estos datos se obtuvo el tiempo de en que se hizo la medicion, esto es un factor importante
+                debido a que algunos de estos asteriodes representan un peligro real para la tierra, y prevenir el impacto
+                previamente aumentan las posibilidades de actuar aunte una posible catastrofe.
+                <div class="text-center rounded my-2">
+                    <img src="../media/asteroids/t.png" class="img-fluid rounded">
+                </div>
+            </p>
+        </p>       
+    </article>
+    <article>
+        <p>
+            La prediccion para este caso es un poco sin sentido ya que para prevenir un impacto es necesario
+            obtener mayor informacion, y la fuente de datos solo tiene el objetivo de documentar. Pero si podemos 
+            predecir una escala de tiempo de nuevos objetos y con esta escala es posible ver en que distancia o a que 
+            velocidad se aproximan los objetos.<br>
+            En su mayoria, los que veremos a continuacion es que podemos obtener muchos objetos con un tiempo superior a 
+            1000 segundos. Evidenciando que para un tiempo menos es posible que ya hayan desaparecido en la atmosfera.
+            <div class="text-center rounded my-2">
+                <img src="../media/asteroids/predict.png" class="img-fluid rounded">
+            </div>
+            <br>
+            Para predecir posible desastres fue necesario calsificar los eventos en tres tipos.
+            <li>Peligro potencial [[Alto]]</li>
+            <li>Peligro potencial [[Medio]]</li>
+            <li>Sin peligro</li>
+            En un archivo llamado <code>Bins.py</code> se encuentra el codigo, si quieres descargarlo puedes hacer 
+                click en <a href="https://github.com/lrondan/data_briefcase/tree/main/0.4%20NASA%20%20json/nuevos_sets/bins.pys">bins.py</a>
+        </p>
+    </article>
+    <article>
+        <h2>Predict...</h2>
+        <p>
+            La prediccion para este caso es un poco sin sentido ya que para prevenir un impacto es necesario
+            obtener mayor informacion, y la fuente de datos solo tiene el objetivo de documentar. Pero si podemos 
+            predecir una escala de tiempo de nuevos objetos y con esta escala es posible ver en que distancia o a que 
+            velocidad se aproximan los objetos.<br>
+            En su mayoria, los que veremos a continuacion es que podemos obtener muchos objetos con un tiempo superior a 
+            1000 segundos. Evidenciando que para un tiempo menos es posible que ya hayan desaparecido en la atmosfera.
+            <div class="text-center rounded my-2">
+                <img src="../media/asteroids/predict.png" class="img-fluid rounded">
+            </div>
+            <br>
+            Para predecir posible desastres fue necesario calsificar los eventos en tres tipos.
+            <li>Peligro potencial [[Alto]]</li>
+            <li>Peligro potencial [[Medio]]</li>
+            <li>Sin peligro</li>
+            En un archivo llamado <code>Bins.py</code> se encuentra el codigo, si quieres descargarlo puedes hacer 
+                click en <a href="https://github.com/lrondan/data_briefcase/tree/main/0.4%20NASA%20%20json/nuevos_sets/bins.pys">bins.py</a>
+        </p>
+    </article>
+    <article>
+        <h3>Magnitud de los eventos</h3>
+        <div class="text-center rounded my-2">
+            <img src="../media/asteroids/magnitud.png" class="img-fluid rounded">
+        </div>
+    </article>
+<h5><a href="#"> Volver...</a></h5>
+</main>
+</html>

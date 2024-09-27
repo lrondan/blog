@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- bootstrap -->
+    <link href="../assets/css/bootstrap_post.css" rel="stylesheet">
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+
+    <!-- my -->
+    <link href="../assets/css/styles_post.css" rel="stylesheet">
+    <link rel="icon" href="../static/electronics.png">
+    <title>Clima en Canada</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light shadow">
+            <div class="container-fluid" id="nav">
+                <a class="navbar-brand text-danger p-2 fs-1 fw-bold" href="../index.html">
+                    Clima en Canada
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse px-5 p-2 fs-3 justify-content-end" id="navbarNavAltMarkup">
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+<section>
+    <div>
+        <img src="../media/clima/banner.jpg" alt="banner" width="100%" height="100%" aria-hidden="true">
+    </div>
+</section>
+<main>
+<h2>Acerca de los datos</h2>
+<p> Como casi siempre los datos fueron obtenidos de una fuente pública, específicamente de la pagina web <a href="www.kaggle.com">kaggle.com</a> 
+en los cuales se encuentran relacionadas las variables meteorológicas en diferentes zonas geográficas de Canada, en cada estación del año. Es 
+importante indicar cuales fueron las variables más relevantes que conformaron este set de datos. <br>
+<li>Temperatura (°C)</li>
+<li>Precipitaciones (%)</li>
+<li>Humedad (%)</li>
+<li>Visibilidad</li>
+<li>Rayos UV</li>
+<li>Velocidad del viento</li>
+</p>
+<h2>Visualizacion de los datos Históricos</h2>
+<p>Es importante graficar los datos que se tienen para poder identificar una relacion directa o indirecta. Para realizar esta tarea se hizo uso 
+    de Microsoft Power BI y Microsoft Excel, utilizando tablas de pivote se pudo agrupar las variables por estaciones del año y a su vez por zona 
+    geográfica. <br>
+    Promediando los valores historicos se obtuvo como resultado los siguientes gráficos.
+
+    <div class="text-center rounded my-2">
+        <h3>Gráfico promedio P_H_T</h3>
+        <img src="../media/clima/tph.png" class="img-fluid rounded" >
+    </div>
+
+    <div class="text-center rounded my-2">
+        <h3>Gráfico promedio UV_V</h3>
+        <img src="../media/clima/v_uv.png" class="img-fluid rounded" >
+    </div>
+
+    Sin embargo fue este segundo gráfico el que más me llamó la atención, debido a que la relación que existe entre la incidencia de los rayos Ultra
+    Violetas y la Visibilidad está mas marcada como se puede ver a simple vista. <br>
+    Siendo así, es posbible entrenar un modelo para predecir la Visibilidad de un día partiendo del dato de la incidencia de los rayos UV, ya que en una 
+    carretera en las altas montañas de Canada para un taxista este dato puede hacer la diferencia entre la vida y la muerte. <br>
+    A continuación es lo que intento demostrar en pocas lineas de código.
+</p>
+<h2>Predict</h2>
+<p>
+    Librerías utilizadas
+    <li>numpy</li>
+    <li>pandas</li>
+    <li>sklearn</li>
+    Antes de implementar el código como archivo <code>.py</code>, entrené el modelo en un ventana utilizando Jupyter Notebook y el resultado de los 
+    scores del modelo fue el siguiente. <br>
+
+    <div class="text-left rounded my-2">
+        <img src="../media/clima/scores.png" class="img-fluid rounded" >
+    </div>
+    Una vez preparado todo en el archivo <code>visibiliy_predict.py</code>, se puede estimar cual es la visibilidad para un día normal utilizando como 
+    entrada por teclado el valor de medición de la incidencia de los rayos UV. <br>
+    La siguiente imagen  muestra lo sencillo que es utlizar la funcion LinearRegression dentro de la librería de sklearn.
+    <div class="text-left rounded my-2">
+        <img src="../media/clima/scripts.png" class="img-fluid rounded" >
+    </div>
+    Incluso en los repositorios de GitHub existen dos archivos con extensión <code>.ipynb</code> que contienen funciones que predicen que tan nublado
+    estará un dia según los datos de entrada de Temperatura, Precipitaciones, Humedad y Velocidad del viento. Para descargarlos puedes hacer click en 
+    los nombres de los archivos.
+    <li><a href="https://github.com/lrondan/data_briefcase/tree/main/0.6%20weather"><code>cloudy_predict.ipynb</code></a></li>
+    <li><a href="https://github.com/lrondan/data_briefcase/tree/main/0.6%20weather"><code>visibilit_predict.ipynb</code></a></li>
+    <li><a href="https://github.com/lrondan/data_briefcase/tree/main/0.6%20weather"><code>visibiliy_pred.py</code></a></li>
+
+    <q>Necesitas instalar las librerías correspondientes</q>
+
+    <h5><a href="#">Volver...</a></h5>
+</p>
+</main>
+
+</html>
